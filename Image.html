@@ -1,0 +1,44 @@
+<!doctype html>
+<html lang="en">
+<head>
+	<meta charset="utf-8" />
+	<meta name="viewport" content="width=device-width,initial-scale=1" />
+	<title>Image Gallery</title>
+	<link rel="stylesheet" href="Gallary.css" />
+</head>
+<body>
+	<header class="page-header">
+		<label class="search-box" for="searchInput">
+			<span class="search-icon" aria-hidden="true">⌕</span>
+			<input id="searchInput" type="search" placeholder="Search images" autocomplete="off" />
+		</label>
+		<h1>Image Gallery</h1>
+		<button class="theme-toggle" id="themeToggle" type="button" role="switch" aria-checked="false" aria-label="Switch to dark mode">
+			<span class="toggle-track">
+				<span class="toggle-thumb"></span>
+			</span>
+		</button>
+	</header>
+
+	<main>
+		<div class="filters" id="filters" role="tablist" aria-label="Filter images by category"></div>
+		<div class="gallery" id="gallery" aria-live="polite"></div>
+	</main>
+
+	<!-- Lightbox -->
+	<div id="lightbox" class="lightbox hidden" aria-hidden="true">
+		<div class="lb-backdrop" id="lbBackdrop"></div>
+		<div class="lb-panel" role="dialog" aria-modal="true" aria-label="Image viewer">
+			<button class="lb-close" id="lbClose" aria-label="Close">×</button>
+			<button class="lb-prev" id="lbPrev" aria-label="Previous">‹</button>
+			<div class="lb-inner">
+				<img id="lightboxImage" src="" alt="" />
+				<p id="caption" class="caption"></p>
+			</div>
+			<button class="lb-next" id="lbNext" aria-label="Next">›</button>
+		</div>
+	</div>
+
+	<script src="ImageG.js"></script>
+</body>
+</html>
