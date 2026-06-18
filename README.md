@@ -1,2 +1,2 @@
 # codealpha_task3
-Image Gallery
+This is my third Project Image Gallery.
